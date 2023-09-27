@@ -20,6 +20,9 @@
 
 :root {
     /* colors */
+    --global-page-color: var(--global-color-neutral-950);
+    --global-page-backgroundColor: var(--global-color-neutral-050);
+
     --global-color-primary-h: 216deg;
     --global-color-primary-s: 100%;
     --global-color-primary-l: 60%;
@@ -105,6 +108,8 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: var(--global-page-color); 
+    background-color: var(--global-page-backgroundColor);
 }
 
 /*
@@ -391,7 +396,6 @@ input::placeholder {
 .o-layout--align-content-space-between {
     align-content: space-between;
 }
-
 /*
     Objects: List
     ---
@@ -448,6 +452,7 @@ input::placeholder {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
 
 /*------------------------------------*\
 #COMPONENTS
@@ -532,6 +537,24 @@ input::placeholder {
     .c-card__body {
         padding: var(--global-whitespace-xl);
     }
+}
+
+@media (prefers-color-scheme: dark) {
+        :root {
+            --global-page-color: White;
+            --global-page-backgroundColor: var(--global-color-neutral-950);
+        }
+        .c-logo__path--1 {
+            fill: var(--global-color-neutral-950);
+          }
+          
+          .c-logo__path--2 {
+            fill: var(--global-color-primary-500);
+          }
+          
+          .c-logo__path--3 {
+            fill: var(--global-color-primary-700);
+          }
 }
 
 /*
@@ -633,6 +656,17 @@ input::placeholder {
         background-color: var(--global-color-primary-600);
         box-shadow: none;
     }
+}
+
+.c-option--hidden:checked + .c-custom-option {
+    /*
+      Do magic stuff here, for example:
+      background-color: red;
+    */
+  }
+
+.c-custom-option__symbol{
+    
 }
 
 /*------------------------------------*\
