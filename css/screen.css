@@ -544,17 +544,45 @@ input::placeholder {
             --global-page-color: White;
             --global-page-backgroundColor: var(--global-color-neutral-950);
         }
-        .c-logo__path--1 {
-            fill: var(--global-color-neutral-950);
+        .c-logo__path {
+            fill: white;
           }
-          
-          .c-logo__path--2 {
-            fill: var(--global-color-primary-500);
+          .c-card{
+            background-color: var(--global-color-neutral-900);
+            .c-label{
+                color: var(--global-color-neutral-300);
+              }
+            .c-input{
+                color: var(--global-color-neutral-600);
+                background-color: var(--global-color-neutral-950);
+                border-color: var(--global-color-neutral-950);
+            }
           }
-          
-          .c-logo__path--3 {
-            fill: var(--global-color-primary-700);
-          }
+
+            .c-form-field input[type="checkbox"] {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 1rem;
+                height: 1rem;
+                background-color: var(--global-color-neutral-950);
+                border-color: var(--global-color-neutral-950);
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .c-form-field input[type="checkbox"]::before {
+                content: "\2713";
+                font-size: .75rem;
+                color: #fff;
+                opacity: 0;
+                transition: opacity 0.2s ease-in-out;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .c-form-field input[type="checkbox"]:checked::before {
+                opacity: 1;
+            }
 }
 
 /*
